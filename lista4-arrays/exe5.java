@@ -33,6 +33,6 @@ public class exe5 {
         else{
             System.out.println("tem na posição: " + posicao); 
         }
-        
+        sc.close();
     }
 }

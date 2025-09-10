@@ -26,5 +26,6 @@ public class exe4 {
             }
         }
         System.out.println("foram : " + contador);
+    sc.close();
     }
 }
