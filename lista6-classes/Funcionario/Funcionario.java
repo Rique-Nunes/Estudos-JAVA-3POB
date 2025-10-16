@@ -7,6 +7,10 @@ public class Funcionario{
     String categoria;
 
     calcularSalarioFinal(String tipo){
-        
+        if(tipo == 'A'){
+            salarioBase += salarioBase*0.2;
+        }else if(tipo == 'B'){
+            salarioBase += salarioBase*0.1;
+        }
     }
 }
