@@ -3,14 +3,31 @@ bônus de acordo com sua categoria.*/
 
 public class Funcionario{
     String nome;
-    double salarioBase;
+    double salarioBase, salarioliquido;
     String categoria;
 
-    calcularSalarioFinal(String tipo){
-        if(tipo == 'A'){
-            salarioBase += salarioBase*0.2;
-        }else if(tipo == 'B'){
-            salarioBase += salarioBase*0.1;
+    public void calcularSalarioFinal(String tipo){
+        switch (tipo) {
+            case "A":
+                salarioliquido = salarioBase + (salarioBase * 0.2);
+                break;
+            case "B":
+                salarioliquido = salarioBase + (salarioBase * 0.1);
+                break; 
+            case "C":
+                salarioliquido =  salarioBase;
+                break;
+            default: 
+                salarioliquido = salarioBase;
+                break;
         }
+    }
+    
+    void exibirsalariobase(){
+        System.out.println(salarioBase);
+    }
+    
+    void exibirsalarioliquido(){
+        System.out.println(salarioliquido);
     }
 }

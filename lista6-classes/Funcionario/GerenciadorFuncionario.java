@@ -9,13 +9,22 @@ public class GerenciadorFuncionario{
 
         Funcionario funcionario = new Funcionario();
 
-        do{
-            System.out.println("1-depositar");
-            System.out.println("2-sacar");
-            System.out.println("3-visualizar");
-            System.out.println("0-para sair");
-            continua = sc.nextInt();
-        }
-    }
+        System.out.println("Diga o nome do funcionario: ");
+        funcionario.nome = sc.nextLine();
+        System.out.println("diga o salário inicial do funcionario: ");
+        funcionario.salarioBase = sc.nextDouble();
 
+        sc.nextLine(); 
+
+        System.out.println("Digite o tipo de bonus A, B ou C");
+        String texto = sc.nextLine();
+        funcionario.calcularSalarioFinal(texto);
+
+
+        System.out.print("Salario base é: ");
+        funcionario.exibirsalariobase();
+
+        System.out.print("Salario líquido: ");
+        funcionario.exibirsalarioliquido(); 
+    }
 }
